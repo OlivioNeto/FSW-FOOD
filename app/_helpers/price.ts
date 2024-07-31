@@ -4,7 +4,7 @@ export const calculateProductTotalPrice = (product: Product): number => {
     if (product.discountPercentage === 0){
         return Number(product.price);
     }
-    const discount = Number(product.price) * (product.discountPercentage / 10000);
+    const discount = Number(product.price) * (product.discountPercentage / 100);
 
     return Number(product.price) - discount;
 };
